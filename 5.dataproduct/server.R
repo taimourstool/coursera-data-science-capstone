@@ -12,7 +12,7 @@ options(shiny.trace = debug)
 source("utils.R", local = TRUE)
 load("data/ngramLookupTables.en_US.RData")
 
-
+  
 shinyServer(function(input, output, session) {
   output$suggest <- renderText({
     updateTypeahead(input$text)
